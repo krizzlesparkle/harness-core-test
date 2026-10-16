@@ -15,7 +15,7 @@ The generic part of a Claude Code harness, shared by a personal harness and a wo
 ## Rules
 
 1. A file reaches `core/` only by promotion from a harness, through the reconcile tool, after `scan_core.py` exits 0.
-2. A file that fits only one side stays in that harness and is tagged `personal` or `work` in that harness's `harness.manifest.yaml`.
+2. A file that fits only one side stays in that harness and is tagged `personal` or `work` in that harness's `harness.manifest.json`.
 3. Edits to `core/` made inside a harness are promoted back, never left as a silent fork.
 
 Run the tests: `python -I scan/test_scan_core.py`
