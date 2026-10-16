@@ -1,0 +1,14 @@
+{
+  "name": "harness-core",
+  "owner": {
+    "name": "harness-core maintainers"
+  },
+  "plugins": [
+    {
+      "name": "harness-core",
+      "source": "./",
+      "description": "Generic harness skills and the reconcile skill."
+    }
+  ],
+  "description": "Generic harness pieces shared across personal and work Claude Code setups."
+}

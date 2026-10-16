@@ -1,0 +1,8 @@
+{
+  "name": "harness-core",
+  "version": "0.1.0",
+  "description": "Generic Claude Code harness pieces shared between a personal and a work setup, plus the skill that reconciles a harness with its upstream core.",
+  "author": {
+    "name": "harness-core maintainers"
+  }
+}
