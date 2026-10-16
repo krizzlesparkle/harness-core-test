@@ -68,8 +68,11 @@ def tag_of(m, rel):
 
 
 def classify(root, u, base):
+    up_root = (root / u["dir"]).resolve() / u["subdir"]
+    if not up_root.is_dir():
+        sys.exit("upstream folder not found: %s (clone the upstream there; a missing upstream is not an empty one)" % up_root)
     here = files(root / u["local"])
-    up = files((root / u["dir"]).resolve() / u["subdir"])
+    up = files(up_root)
     out = {}
     for rel in sorted(set(here) | set(up)):
         h = sha(here[rel]) if rel in here else None

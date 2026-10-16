@@ -83,6 +83,14 @@ class ReconcileTests(unittest.TestCase):
             self.assertEqual(code, 1)
             self.assertIn("does not accept", out)
 
+    def test_missing_upstream_is_an_error_not_empty(self):
+        with tempfile.TemporaryDirectory() as t:
+            up, h = make(t)
+            (up / "core").rmdir()
+            up.rmdir()
+            code, out = run(h, "status")
+            self.assertNotEqual(code, 0)
+
     def test_apply_needs_direct_policy(self):
         with tempfile.TemporaryDirectory() as t:
             up, h = make(t, push="patch-only")
