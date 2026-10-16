@@ -9,6 +9,8 @@ The generic part of a Claude Code harness, shared by a personal harness and a wo
 | `core/` | The shared content: generic rules, hooks, skills, scripts. Each harness vendors this folder as `core/`. |
 | `scan/scan_core.py` | The scan gate. Every promotion into `core/` runs it. Exit 0 clean, 1 findings, 2 something unread. |
 | `scan/test_scan_core.py` | Tests for the gate, one case per blocked class. |
+| `tools/reconcile.py` | The reconcile tool: `status`, `pull`, `promote`, driven by a harness manifest. |
+| `tools/test_reconcile.py` | Tests for the tool. |
 
 ## Rules
 
